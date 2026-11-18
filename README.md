@@ -30,7 +30,7 @@ The demo login is a client-side entry gate, not production authentication. Works
 
 ## Deploy
 
-The included GitHub Actions workflow enables and publishes the static site to GitHub Pages on pushes to `main`. If repository policy blocks automatic Pages enablement, enable GitHub Pages with **GitHub Actions** as the build and deployment source in repository settings, then rerun the workflow. The expected URL for this repository is:
+The included GitHub Actions workflow publishes the static site to GitHub Pages on pushes to `main`. GitHub Pages must use **GitHub Actions** as its build and deployment source; that setting is configured for this repository. The expected URL for this repository is:
 
 `https://pendemsravan123.github.io/AI-assignment1/`
 
