@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7fb">
+    <meta name="description" content="Find your study gaps, test what you know, and build a revision plan from your own materials.">
+    <title>GapFinder AI — Study with direction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="login-screen" class="login-screen">
+      <section class="login-card">
+        <a class="brand brand-login" href="#" aria-label="GapFinder home">
+          <span class="brand-mark">g<span>.</span></span>
+          <span>gapfinder<span class="brand-ai">.ai</span></span>
+        </a>
+        <div class="login-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="art-center"><span>✦</span></div>
+          <span class="art-tag tag-one">your notes</span>
+          <span class="art-tag tag-two">your next step</span>
+          <span class="art-tag tag-three">your progress</span>
+        </div>
+        <p class="eyebrow">A smarter way to revise</p>
+        <h1>Find the gaps.<br><span>Own the exam.</span></h1>
+        <p class="login-copy">A personal study coach that finds what you haven't mastered yet — using your own material.</p>
+        <form id="login-form" class="login-form">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" value="demo@gapfinder.ai" autocomplete="username" required>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" value="gapfinder2026" autocomplete="current-password" required>
+          <p id="login-error" class="form-error" role="alert"></p>
+          <button class="button button-primary button-wide" type="submit">Continue to your workspace <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="demo-hint">Judge demo: <strong>demo@gapfinder.ai</strong> · <strong>gapfinder2026</strong></p>
+        <p class="privacy-note"><span class="privacy-dot"></span> Your study data stays in this browser.</p>
+      </section>
+    </main>
+
+    <div id="app-shell" class="app-shell" hidden>
+      <aside class="sidebar">
+        <a class="brand" href="#" data-page="dashboard" aria-label="GapFinder dashboard">
+          <span class="brand-mark">g<span>.</span></span>
+          <span>gapfinder<span class="brand-ai">.ai</span></span>
+        </a>
+        <div class="workspace-label">YOUR WORKSPACE</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-page="dashboard"><span class="nav-icon">⌂</span> Overview</button>
+          <button class="nav-link" data-page="materials"><span class="nav-icon">▤</span> My materials <span id="material-count" class="nav-count">0</span></button>
+          <button class="nav-link" data-page="diagnostic"><span class="nav-icon">◉</span> Take a diagnostic</button>
+          <button class="nav-link" data-page="gaps"><span class="nav-icon">◈</span> Gap report</button>
+          <button class="nav-link" data-page="plan"><span class="nav-icon">☷</span> Revision plan</button>
+          <button class="nav-link" data-page="tutor"><span class="nav-icon">✳</span> Ask your material</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="privacy-card"><span class="privacy-lock">⌑</span><strong>Private by design</strong><p>Materials are processed on this device. Nothing is sent to an AI service.</p></div>
+          <button id="logout-button" class="profile-button">
+            <span class="avatar">S</span><span class="profile-name"><strong>Sravan</strong><small>Student workspace</small></span><span class="profile-more">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="main-column">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="page-title">Overview</strong></div>
+          <div class="topbar-actions"><span class="today-label" id="today-label"></span><span class="top-avatar">S</span></div>
+        </header>
+        <main class="content">
+          <section id="page-dashboard" class="page-section"></section>
+          <section id="page-materials" class="page-section" hidden></section>
+          <section id="page-diagnostic" class="page-section" hidden></section>
+          <section id="page-gaps" class="page-section" hidden></section>
+          <section id="page-plan" class="page-section" hidden></section>
+          <section id="page-tutor" class="page-section" hidden></section>
+        </main>
+        <footer class="app-footer"><span>Built for focused revision.</span><span>Grounded in your materials <span class="footer-dot">●</span></span></footer>
+      </section>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
